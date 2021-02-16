@@ -1,0 +1,19 @@
+.footer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: $black;
+}
+
+.footer__connect {
+  margin-bottom: 25px;
+  @include font(16px, 500, 1.1);
+  color: $white;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}

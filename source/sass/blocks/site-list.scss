@@ -1,0 +1,23 @@
+.site-list {
+  display: flex;
+}
+
+.site-list__item {
+  margin-right: 25px;
+
+  &:last-child {
+    margin-right: 0
+  }
+}
+
+.site-list__link {
+  @include font(16px, 500, 1.1);
+  text-decoration: none;
+  color: $white;
+}
+
+@media (max-width: 440px) {
+  .site-list {
+    display: none;
+  }
+}

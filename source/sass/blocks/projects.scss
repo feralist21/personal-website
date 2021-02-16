@@ -1,0 +1,129 @@
+.projects {
+  padding-bottom: 100px;
+}
+
+.projects__title {
+  margin-bottom: 30px;
+  @include font(24px, 700, 1.1);
+  color: $white;
+}
+
+.projects__item {
+  width: 100%;
+  margin-bottom: 35px;
+  padding: 32px 38px 38px 38px;
+  background-color: $ligth-black;
+  border-radius: 8px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--border-purple {
+    border-left: 8px solid $purple;
+  }
+
+  &--border-green {
+    border-left: 8px solid $green;
+  }
+
+  &--border-orange {
+    border-left: 8px solid $orange;
+  }
+}
+
+.projects__subtitle {
+  margin-bottom: 15px;
+  @include font(24px, 500, 1.1);
+  color: $white;
+}
+
+.projects__description {
+  margin-bottom: 50px;
+  @include font(16px, 400, 1.4);
+  color: $ligth-blue;
+}
+
+.projects__github-link {
+  color: $green;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease-out;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: $green;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+  }
+
+  &:hover {
+    color: $dark-green;
+  }
+
+  &:focus {
+    color: $dark-green;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.projects__link {
+  display: inline-block;
+  padding: 10px 30px;
+  border: 2px solid $ligth-purple;
+  border-radius: 6px;
+  @include font(16px, 500, 1.1);
+  color: $white;
+  text-decoration: none;
+  transition: background-color 0.3s ease-out, color 0.3s ease-out;
+
+  &:hover {
+    background-color: $btn-hover;
+    color: $ligth-green;
+  }
+
+  &:focus {
+    background-color: $btn-hover;
+    color: $ligth-green;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects {
+    padding-bottom: 80px;
+  }
+}
+
+@media (max-width: 440px) {
+  .projects {
+    padding-bottom: 50px;
+  }
+
+  .projects__item {
+    padding: 20px;
+  }
+
+  .projects__subtitle {
+    font-size: 22px;
+  }
+
+  .projects__description {
+    margin-bottom: 30px;
+    font-size: 14px;
+  }
+
+  .projects__link {
+    padding: 7px 20px;
+  }
+}
